@@ -1,6 +1,9 @@
-# FastAPI
+# FastAPI and Amazon Rekognition
 
-Experiment with FastAPI (Python)
+![](fastapi.png)
+
+![](amazon-rekognition.png)
+
 
 ## Features
 
@@ -8,9 +11,9 @@ Experiment with FastAPI (Python)
 - Well structured
 - API versioning
 - Amazon DynamoDB
-- Amazon S3
-- Amazon Rekognition `(soon)`
-- File upload `(soon)`
+- Amazon S3 (list objects, put object)
+- Amazon Rekognition (image modaration before upload)
+- File upload (to local and AWS S3)
 - CORS `(soon)`
 - Logs `(soon)`
 - Dockerfile `(soon)`
