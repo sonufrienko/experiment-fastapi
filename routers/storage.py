@@ -2,13 +2,25 @@ from fastapi import APIRouter
 import boto3
 
 router = APIRouter()
-s3 = boto3.resource("s3")
+s3 = boto3.client("s3")
+BUCKET_NAME = "itreko"
 
 
 @router.get("/storage")
 async def read_storage():
-    buckets = []
-    for bucket in s3.buckets.all():
-        buckets.append({"name": bucket.name})
-    return buckets
+    objects = []
+
+    response = s3.list_objects(Bucket=BUCKET_NAME, MaxKeys=100,)
+
+    for obj in response["Contents"]:
+        objects.append(
+            {
+                "key": obj["Key"],
+                "last_modified": obj["LastModified"],
+                "size": obj["Size"],
+            }
+        )
+
+    return objects
+
 
