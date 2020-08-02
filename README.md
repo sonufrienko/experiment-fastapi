@@ -1,8 +1,19 @@
 # FastAPI and Amazon Rekognition
 
-![](fastapi.png)
-
-![](amazon-rekognition.png)
+<table>
+  <tr>
+    <td style="width: 50%;">
+      <a href="https://fastapi.tiangolo.com/" target="_blank">
+        <img src="./fastapi.png" />
+      </a>
+    </td>
+    <td style="width: 50%;">
+      <a href="https://aws.amazon.com/rekognition/" target="_blank">
+        <img src="./amazon-rekognition.png" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 
 ## Features
